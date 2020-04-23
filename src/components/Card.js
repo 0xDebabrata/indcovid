@@ -5,11 +5,10 @@ const card = ({ state, active, confirmed, deaths, recovered }) => {
     return (
         <div className='card'>
             <div>
-                <div>
-                  <h1 className='state'>{state}</h1><span className='confirmed'>{confirmed}</span>
-                </div>
-                <p className='active'>{active}</p>
-                <p className='deaths'>{recovered}/{deaths}</p>
+                <h1 className='state'>{state}</h1>
+                <p className='confirmed'><span>Confirmed</span>{confirmed}</p>
+                <p className='active'><span>Active</span>{active}</p>
+                <p className='deaths'><span>Recovered/Deaths</span>{recovered}/{deaths}</p>
             </div>
         </div>
     )

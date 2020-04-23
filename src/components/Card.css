@@ -5,7 +5,7 @@
     padding: 5px 10px 10px 20px;
     display: inline-block;
     text-align: left;
-    border: 1px solid white;
+    border: 1px solid #05BE9C;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -21,17 +21,12 @@ p {
   font-family: 'Work Sans', sans-serif;
 }
 
-.card div div {
-  text-align: right;
-}
-
 .state {
   padding: 0px;
   margin: 0px;
   font-family: 'Hind', sans-serif;
-  font-size: 25px;
+  font-size: 30px;
   text-align: left;
-  position: absolute;
   color: #055500;
 }
 
@@ -47,4 +42,12 @@ p {
 
 .deaths {
   font-size: 30px;
+}
+
+span {
+  text-align: left;
+  font-size: 15px;
+  font-family: 'Work Sans';
+  font-weight: normal;
+  padding-right: 10px;
 }
