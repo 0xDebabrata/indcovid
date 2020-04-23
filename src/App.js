@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import List from './components/List';
+import SearchBox from './components/SearchBox';
 import './App.css';
 
 class App extends Component {
     constructor() {
         super()
         this.state = {
-            stateData: []
+            stateData: [],
+            searchfield: ''
         }
+    }
+
+    onSearchChange = (event) => {
+        this.setState({ searchfield: event.target.value });
     }
 
     componentDidMount() {
@@ -20,14 +26,17 @@ class App extends Component {
     }
 
     render() {
-
+        const filter = this.state.stateData.filter(state => {
+            return state.state.toLowerCase().includes(this.state.searchfield.toLowerCase());
+        })
         if (this.state.stateData.length === 0) {
             return (<h1 className='loading'>Loading...</h1>)
         } else {
             return (
                 <div className='parent'>
                     <h1 className='heading'>India COVID-19 Data</h1>
-                    <List stateData={this.state.stateData} />
+                    <SearchBox searchChange={this.onSearchChange}/>
+                    <List stateData={filter} />
                 </div>
             )
         }

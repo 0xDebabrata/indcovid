@@ -1,0 +1,12 @@
+.container {
+    padding: 10px;
+}
+
+.searchbox {
+    padding: 15px;
+    background-color: rgb(126, 255, 223);
+    border-style: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+}
