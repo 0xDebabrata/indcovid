@@ -20,7 +20,7 @@ class App extends Component {
     }
 
     render() {
-        
+
         if (this.state.stateData.length === 0) {
             return (<h1 className='loading'>Loading...</h1>)
         } else {

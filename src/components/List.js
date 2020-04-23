@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from './Card';
-// import './List.css';
 
 const CardList = ({ stateData }) => {
     return (
@@ -9,8 +8,6 @@ const CardList = ({ stateData }) => {
                 stateData.map((user, i) => {
                     if (stateData[i].state === 'Andaman and Nicobar Islands') {
                       stateData[i].state = 'A&N Islands'
-                    } else if (stateData[i].state === 'Jammu and Kashmir') {
-                      stateData[i].state = 'J&K'
                     } else if (stateData[i].state === 'Dadra and Nagar Haveli') {
                       stateData[i].state = 'D&N Haveli'
                     }
