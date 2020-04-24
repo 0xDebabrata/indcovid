@@ -34,7 +34,7 @@ class App extends Component {
         } else {
             return (
                 <div className='parent'>
-                    <h1 className='heading'>India COVID-19 Data</h1>
+                    <h1 className='heading'>COVID-19 - India</h1>
                     <SearchBox searchChange={this.onSearchChange}/>
                     <List stateData={filter} />
                 </div>
