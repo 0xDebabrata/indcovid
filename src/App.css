@@ -10,3 +10,9 @@
   margin-bottom: 0px;
   padding: 0px;
 }
+
+.loading {
+  text-align: center;
+  font-size: 6vw;
+  font-family: 'Work Sans'
+}
