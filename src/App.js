@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import List from './components/List';
 import SearchBox from './components/SearchBox';
+import Navbar from './components/Navbar';
 import './App.css';
 
 class App extends Component {
@@ -8,8 +9,14 @@ class App extends Component {
         super()
         this.state = {
             stateData: [],
-            searchfield: ''
+            searchfield: '',
+            state: 'data'
         }
+    }
+
+    onStateChange = (event) => {
+      const page = event.target.className;
+      this.setState({ state: page })
     }
 
     onSearchChange = (event) => {
@@ -19,28 +26,41 @@ class App extends Component {
     componentDidMount() {
       fetch('https://api.covid19india.org/data.json')
         .then(response => response.json())
-        .then(data => {
-          this.setState({ stateData: data['statewise'] })
-          console.log(data)})
-        .then(console.log(this.state.stateData, 'state'))
+        .then(data => this.setState({ stateData: data['statewise'] }))
     }
 
     render() {
         const filter = this.state.stateData.filter(state => {
             return state.state.toLowerCase().includes(this.state.searchfield.toLowerCase());
         })
-        if (this.state.stateData.length === 0) {
-            return (<h1 className='loading'>Loading...</h1>)
+        if (this.state.state === 'data') {
+            if (this.state.stateData.length === 0) {
+                return (<h1 className='loading'>Loading...</h1>)
+            } else {
+                return (
+                    <div className='parent'>
+                        <h1 className='heading'>COVID-19: India</h1>
+                        <Navbar stateChange={this.onStateChange}/>
+                        <SearchBox searchChange={this.onSearchChange}/>
+                        <List stateData={filter} />
+                    </div>
+                )
+            }
+        } else if (this.state.state === 'info') {
+            return(
+              <div className='parent'>
+                  <h1 className='heading'>COVID-19: India</h1>
+                  <Navbar stateChange={this.onStateChange}/>
+              </div>
+            )
         } else {
-            return (
-                <div className='parent'>
-                    <h1 className='heading'>COVID-19: India</h1>
-                    <SearchBox searchChange={this.onSearchChange}/>
-                    <List stateData={filter} />
-                </div>
+            return(
+              <div className='parent'>
+                  <h1 className='heading'>COVID-19: India</h1>
+                  <Navbar stateChange={this.onStateChange}/>
+              </div>
             )
         }
-
     }
 }
 
