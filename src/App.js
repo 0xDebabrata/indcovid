@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import List from './components/List';
 import SearchBox from './components/SearchBox';
 import Navbar from './components/Navbar';
+import Donation from './components/Donation'
 import './App.css';
 
 class App extends Component {
@@ -10,7 +11,7 @@ class App extends Component {
         this.state = {
             stateData: [],
             searchfield: '',
-            state: 'data'
+            state: 'donation'
         }
     }
 
@@ -58,6 +59,7 @@ class App extends Component {
               <div className='parent'>
                   <h1 className='heading'>COVID-19: India</h1>
                   <Navbar stateChange={this.onStateChange}/>
+                  <Donation />
               </div>
             )
         }
