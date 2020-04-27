@@ -1,12 +1,24 @@
 .main {
-  width: 80%;
+  width: 65%;
   margin: auto;
   margin-top: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .main {
+    width: 80%;
+  }
+}
+
+.main h1 {
+  margin-bottom: 30px;
 }
 
 .main p {
   text-align: justify;
   font-size: 20px;
+  font-weight: bolder;
 }
 
 blockquote {
@@ -28,15 +40,21 @@ blockquote:before {
 blockquote p {
   display: inline;
   font-family: 'Roboto';
-  font-weight: normal;
+  font-weight: lighter;
 }
 
 button {
-  padding: 10px 40px;
+  margin-top: 30px;
+  padding: 5px 40px;
   font-size: 20px;
   border-radius: 30px;
   background-color: #059FBE;
   border-style: none;
+  transition: .3s all;
+}
+
+button:hover {
+  transform: scale(1.1);
 }
 
 a {
@@ -44,4 +62,33 @@ a {
   font-family: 'Hind';
   font-weight: normal;
   color: white;
+}
+
+h2,h3 {
+  text-align: left;
+}
+
+ol {
+  text-align: left;
+}
+
+.qr {
+  width: 25%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+
+.table {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 15px; 
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }
