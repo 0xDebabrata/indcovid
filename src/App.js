@@ -11,13 +11,13 @@ class App extends Component {
         this.state = {
             stateData: [],
             searchfield: '',
-            state: 'donation'
+            state: 'data'
         }
     }
 
     onStateChange = (event) => {
       const page = event.target.className;
-      this.setState({ state: page })
+      this.setState({ searchfield: '', state: page })
     }
 
     onSearchChange = (event) => {

@@ -84,11 +84,18 @@ ol {
 .table {
   width: 50%;
   border-collapse: collapse;
-  margin: 15px; 
+  margin: 15px;
 }
 
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+}
+
+li a {
+  text-decoration: none;
+  color: #059FBE;
+  font-family: 'Work Sans';
+  font-weight: bold;
 }

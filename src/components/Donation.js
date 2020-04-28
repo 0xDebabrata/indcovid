@@ -18,7 +18,7 @@ const donation = () => {
        </blockquote>
        <p>You too can play an integral role in this fight! Tap on the button below to donate to PM-CARES
        Fund. You will be redirected to the official governement website.</p>
-      <button><a href='https://www.pmcares.gov.in/en/' target='_blank'>Donate</a></button>
+      <button><a href='https://www.pmcares.gov.in/en/' target='_blank' rel='noopener noreferrer'>Donate</a></button>
       <h2>Other modes for donating:</h2>
       <ol>
         <li>
@@ -26,32 +26,15 @@ const donation = () => {
           <p>Scan the QR code through your BHIM UPI</p>
           <img className='qr' src={QrCode} alt='UPI QR Code' />
         </li>
-        {/*<li>
-          <h3>Bank Transfer</h3>
-          <p>Transfer money to any of the following accounts</p>
-          <table className='table'>
-            <tr>
-              <td>Bank Name</td>
-              <td>State Bank of India</td>
-            </tr>
-            <tr>
-              <td>Branch Name</td>
-              <td>New Delhi Main Branch</td>
-            </tr>
-            <tr>
-              <td>Account Name</td>
-              <td>PM CARES</td>
-            </tr>
-            <tr>
-              <td>Account Number</td>
-              <td>2121PM20202</td>
-            </tr>
-            <tr>
-              <td>IFSC Code</td>
-              <td>SBIN0000691</td>
-            </tr>
-          </table>
-        </li>*/}
+        <li>
+          <p>Donate through <a href='https://www.icicibank.com/pm-cares-fund-donation.page?ITM=nli_cms_hp_static_covid-pm-relief-fund-m' target='_blank' rel='noopener noreferrer'>ICICI Bank</a></p>
+        </li>
+        <li>
+          <p>Donate through <a href='https://www.yesbank.in/donations-to-pm-cares-fund' target='_blank' rel='noopener noreferrer'>YES Bank</a></p>
+        </li>
+        <li>
+          <p>Donate through <a href='https://www.hdfcbank.com/personal/pay/donations' target='_blank' rel='noopener noreferrer'>HDFC Bank</a></p>
+        </li>
       </ol>
     </div>
   )

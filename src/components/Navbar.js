@@ -6,7 +6,7 @@ const navbar = ({ stateChange }) => {
     <div>
       <ul className='nav'>
         <li class='data' onClick={stateChange}>Data</li>
-        <li class='info'onClick={stateChange}>Information</li>
+        {/*<li class='info'onClick={stateChange}>Information</li>*/}
         <li class='donation' onClick={stateChange}>Donation</li>
       </ul>
     </div>
