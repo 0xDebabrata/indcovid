@@ -9,6 +9,10 @@
   .main {
     width: 80%;
   }
+
+  .qr {
+    width: 40%;
+  }
 }
 
 .main h1 {
@@ -98,4 +102,19 @@ li a {
   color: #059FBE;
   font-family: 'Work Sans';
   font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .main {
+    width: 80%;
+  }
+
+  .qr {
+    width: 90%;
+    display: block;
+    margin-left: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 }

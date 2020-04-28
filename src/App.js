@@ -18,6 +18,21 @@ class App extends Component {
     onStateChange = (event) => {
       const page = event.target.className;
       this.setState({ searchfield: '', state: page })
+
+      const highlight = () => {
+        const element = document.getElementsByTagName('li');
+        console.log('state', this.state.state)
+        for (var i = 0, len = element.length; i < len; i++ ) {
+          const list = element[i].classList;
+          console.log(list)
+          if (list[0] === page) {
+            element[i].classList.add('activenav')
+          } else {
+            element[i].classList.remove('activenav')
+          }
+        }
+      }
+      highlight(this.state.state);
     }
 
     onSearchChange = (event) => {
@@ -58,7 +73,7 @@ class App extends Component {
             return(
               <div className='parent'>
                   <h1 className='heading'>COVID-19: India</h1>
-                  <Navbar stateChange={this.onStateChange}/>
+                  <Navbar stateChange={this.onStateChange} state={this.state.state}/>
                   <Donation />
               </div>
             )

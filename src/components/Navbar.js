@@ -1,13 +1,14 @@
 import React from 'react';
 import './Navbar.css';
 
-const navbar = ({ stateChange }) => {
+const navbar = ({ stateChange, state }) => {
+
   return(
     <div>
       <ul className='nav'>
-        <li class='data' onClick={stateChange}>Data</li>
+        <li className='data' onClick={stateChange}>Data</li>
         {/*<li class='info'onClick={stateChange}>Information</li>*/}
-        <li class='donation' onClick={stateChange}>Donation</li>
+        <li className='donation' onClick={stateChange}>Donation</li>
       </ul>
     </div>
   )
