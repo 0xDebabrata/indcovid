@@ -1,0 +1,20 @@
+.nav {
+  list-style-type: none;
+  margin-bottom: 10px;
+  padding: 0;
+  background-color: #059FBE;
+}
+
+.nav li {
+  display: inline-block;
+  text-align: center;
+  padding: 5px 20px;
+  font-family: 'Hind';
+  font-size: 20px;
+  color: white;
+}
+
+.nav li:hover {
+  cursor: pointer;
+  background-color: #001185;
+}
