@@ -8,8 +8,8 @@ const CardList = ({ stateData }) => {
                 stateData.map((user, i) => {
                     if (stateData[i].state === 'Andaman and Nicobar Islands') {
                       stateData[i].state = 'A&N Islands'
-                    } else if (stateData[i].state === 'Dadra and Nagar Haveli') {
-                      stateData[i].state = 'D&N Haveli'
+                    } else if (stateData[i].state === 'Dadra and Nagar Haveli and Daman and Diu') {
+                      stateData[i].state = 'DNHDD'
                     }
                     return (
                     <Card
