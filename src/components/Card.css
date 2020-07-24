@@ -11,7 +11,7 @@
 }
 
 .card div {
-  width: 290px;
+  width: 330px;
 }
 
 p {
@@ -37,7 +37,7 @@ p {
   font-size: 30px;
 }
 
-.active {
+.active-class {
   font-weight: bold;
 }
 
