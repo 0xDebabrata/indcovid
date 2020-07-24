@@ -52,3 +52,29 @@ span {
   font-weight: normal;
   padding-right: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 310px;
+  }
+
+  .card div {
+    width: 300px;
+  }
+
+  .state {
+    font-size: 25px;
+  }
+
+  .confirmed {
+    font-size: 25px;
+  }
+
+  .deaths {
+    font-size: 25px;
+  }
+
+  span {
+    font-size: 13px;
+  }
+}
