@@ -1,12 +1,18 @@
 .nav {
   list-style-type: none;
+  margin-top: 0;
   margin-bottom: 10px;
   padding: 0;
   background-color: #059FBE;
+  text-align: center;
+  font-weight: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav li {
-  display: inline-block;
+  display: block;
   text-align: center;
   padding: 5px 20px;
   font-family: 'Hind';
@@ -19,6 +25,6 @@
   background-color: #001185;
 }
 
-.activenav {
+.active {
   background-color: #001185;
 }
