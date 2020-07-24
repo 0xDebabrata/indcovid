@@ -1,14 +1,14 @@
 import React from 'react';
 import './Navbar.css';
+import { NavLink } from 'react-router-dom';
 
 const navbar = ({ stateChange, state }) => {
 
   return(
     <div>
       <ul className='nav'>
-        <li className='data' onClick={stateChange}>Data</li>
-        {/*<li class='info'onClick={stateChange}>Information</li>*/}
-        <li className='donation' onClick={stateChange}>Donation</li>
+        <NavLink to='/'><li className='data' >Data</li></NavLink>
+        <NavLink to='/donate'><li className='donation'>Donation</li></NavLink>
       </ul>
     </div>
   )
